@@ -34,17 +34,121 @@ Cortex-M0 includes features like NVIC (Nested Vectored Interrupt Controller), be
 
 Due to these improvements, Cortex-M0 is preferred over ARM7 in modern embedded and IoT systems, though Wi-Fi is provided through external modules, not the core itself.
 
-3.Difference between von-neumann and Hardvard architecture ?
+--> 3. Difference between von-neumann and Hardvard architecture ?
 
 A.Von Neumann → Single memory, single bus, one operation at a time
 
 Harvard → Separate memory, separate buses, parallel operations
 
-4. Explain about LPC2148 mcu?
+--> 4. Explain about LPC2148 mcu?
 
 A. LPC2148 is an ARM7-based 32-bit RISC microcontroller with a maximum clock speed of 60 MHz. It includes on-chip Flashmemory 512kb, SRAM 32kb, 10-bit ADC, DAC, UART, I2C, SPI, PWM, RTC, and supports EmbeddedICE for debugging. It is widely used in low-power embedded applications.
 
-5.Explain about Raspberry pi pico W ?
+--> 5. Explain about Raspberry pi pico W ?
 
 A.RP2040 is a dual-core 32-bit RISC microcontroller based on ARM Cortex-M0+, used in Raspberry Pi Pico W. It uses a modified Harvard architecture and runs at up to 133 MHz. It has 264 KB on-chip SRAM and uses external QSPI Flash (typically 2 MB). It supports a 12-bit ADC, GPIO, UART, SPI, I2C, PWM, timers, RTC, and Pico W adds Wi-Fi, making it suitable for IoT applications.
 
+
+--> 6. What is a Core?
+Answer:
+A core is the main part of a processor that executes instructions. It contains the ALU, registers, and control unit.
+
+--> 7. What is the difference between Core and Processor?
+Answer:
+A core executes instructions, while a processor may contain one or more cores.
+
+--> 8. What is bare-metal programming?
+Answer:
+Bare-metal programming is writing code that runs directly on hardware without an OS.
+
+--> 9. Interrupt vs polling?
+Answer:
+Polling continuously checks a condition, while an interrupt notifies the CPU only when an event occurs.
+
+--> 10. What is volatile keyword?
+Answer:
+volatile tells the compiler that a variable can change unexpectedly, so it should not optimize it.
+
+--> 11. Difference between C and Embedded C?
+Answer:
+Embedded C is an extension of c used to write programs for hardware control with direct register access.
+where as C is a general-purpose programming language used to develop software applications, supporting both low-level and high-level programming concepts.
+
+--> 12. What is static keyword?
+Answer:
+static preserves variable value between function calls and limits scope.
+
+--> 13. Macro vs function?
+Answer:
+Macros are preprocessor directives with no type checking, while functions are compiled and safer.
+
+--> 14. What is bit masking?
+Answer:
+Bit masking is used to set, clear, or toggle specific bits in a register.
+
+-->15. What is memory-mapped I/O?
+Answer:
+Peripheral registers are accessed like memory locations using pointers.
+
+-->16.What is pipeline?
+Answer:
+Pipeline divides instruction execution into stages to increase speed.
+
+-->17. What is NVIC?
+Answer:
+NVIC handles interrupt prioritization and control in Cortex-M processors.
+
+-->18. What is vector table?
+Answer:
+A vector table stores addresses of interrupt service routines.
+
+-->19. What precautions in ISR?
+Answer:
+ISR should be short, avoid delays, and not use blocking functions.
+
+--> 20. What is interrupt latency?
+Answer:
+Time taken from interrupt occurrence to ISR execution.
+
+--> 21. What is hex file?
+Answer:
+Hex file contains machine code to be flashed into MCU.
+
+--> 22. What is const?
+Answer:
+const prevents modification of a variable after initialization.
+
+--> 23.What causes stack overflow?
+Answer:
+Deep recursion, large local variables, or infinite function calls.
+
+--> 24. What is typedef?
+Answer:
+typedef creates an alias name for a data type.
+
+--> 26. What is a timer?
+Answer:
+A hardware counter used for delays, event timing, and interrupts.
+
+-->  27. Why C is used in embedded systems?
+Answer:
+Efficient, fast, hardware-level control.
+
+--> 28. Why volatile is used with bitwise register access?
+Answer:
+To prevent compiler optimization of hardware registers.
+
+--> 29. How do you set a bit?
+num = num | (1 << pos);
+
+--> 29. How do you clear a bit?
+num = num & ~(1 << pos);
+
+--> 30. How do you toggle a bit?
+num = num ^ (1 << pos);
+
+--> 31. How do you check if a bit is set?
+if(num & (1 << pos))
+    printf("Bit is set");
+
+    
